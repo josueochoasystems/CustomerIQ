@@ -1,11 +1,27 @@
-CustomerIQ — Sistema Interactivo de Análisis de Clientes con ML
-Aplicación web interactiva construida con Streamlit para análisis completo de datasets de clientes: exploración, limpieza, segmentación (clustering) y clasificación supervisada, con interpretación orientada a gerencia.
+# CustomerIQ — Sistema Interactivo de Análisis de Clientes con ML
 
-✦ Características principales
-FeatureDetalle🔌 GenéricoFunciona con cualquier dataset CSV / XLSX / JSON / TSV🎯 SegmentaciónK-Means + Clustering Jerárquico evaluados con índice Silhouette🤖 ClasificaciónÁrbol de Decisión + Random Forest con Accuracy, F1, AUC y curva ROC🛡️ Anti data leakageEscalado y encoding ajustados sólo sobre entrenamiento📋 HistorialExperimentos exportables a CSV🔮 PredicciónIndividual y por lote + exportación de modelo .pkl📑 Reporte ejecutivoDescargable en HTML
+Aplicación web interactiva construida con **Streamlit** para análisis completo de datasets de clientes: exploración, limpieza, segmentación (clustering) y clasificación supervisada, con interpretación orientada a gerencia.
 
-⚙️ Instalación
-bash# 1. Clonar repositorio
+---
+
+## ✦ Características principales
+
+| Feature | Detalle |
+|--------|---------|
+| 🔌 **Genérico** | Funciona con cualquier dataset CSV / XLSX / JSON / TSV |
+| 🎯 **Segmentación** | K-Means + Clustering Jerárquico evaluados con índice Silhouette |
+| 🤖 **Clasificación** | Árbol de Decisión + Random Forest con Accuracy, F1, AUC y curva ROC |
+| 🛡️ **Anti data leakage** | Escalado y encoding ajustados sólo sobre entrenamiento |
+| 📋 **Historial** | Experimentos exportables a CSV |
+| 🔮 **Predicción** | Individual y por lote + exportación de modelo `.pkl` |
+| 📑 **Reporte ejecutivo** | Descargable en HTML |
+
+---
+
+## ⚙️ Instalación
+
+```bash
+# 1. Clonar repositorio
 git clone <url-del-repo>
 cd CustomerIQ
 
@@ -19,14 +35,36 @@ source .venv/bin/activate
 
 # 3. Instalar dependencias
 pip install -r requirements.txt
-▶ Ejecución
-bashstreamlit run app.py
-Abrir en el navegador: http://localhost:8501
+```
 
-🗺 Flujo recomendado
-PasoPáginaDescripción01📁 Cargar DatosSubir CSV, Excel, JSON o TSV02🔍 ExploraciónEDA automático: distribuciones, correlaciones, nulos03🧹 LimpiezaImputación, outliers y duplicados04✂️ ParticiónTrain/Val/Test + encoding + escalado + baseline05🎯 SegmentaciónK-Means y clustering jerárquico06🤖 ClasificaciónÁrbol de Decisión y Random Forest07📊 ComparaciónROC, matrices de confusión, interpretación gerencial08📑 ReporteResumen ejecutivo y descargas
+## ▶ Ejecución
 
-🗂 Estructura del proyecto
+```bash
+streamlit run app.py
+```
+
+Abrir en el navegador: `http://localhost:8501`
+
+---
+
+## 🗺 Flujo recomendado
+
+| Paso | Página | Descripción |
+|:----:|--------|-------------|
+| `01` | 📁 Cargar Datos | Subir CSV, Excel, JSON o TSV |
+| `02` | 🔍 Exploración | EDA automático: distribuciones, correlaciones, nulos |
+| `03` | 🧹 Limpieza | Imputación, outliers y duplicados |
+| `04` | ✂️ Partición | Train/Val/Test + encoding + escalado + baseline |
+| `05` | 🎯 Segmentación | K-Means y clustering jerárquico |
+| `06` | 🤖 Clasificación | Árbol de Decisión y Random Forest |
+| `07` | 📊 Comparación | ROC, matrices de confusión, interpretación gerencial |
+| `08` | 📑 Reporte | Resumen ejecutivo y descargas |
+
+---
+
+## 🗂 Estructura del proyecto
+
+```
 CustomerIQ/
 ├── app.py                  # Página principal y session_state global
 ├── requirements.txt
@@ -55,9 +93,25 @@ CustomerIQ/
 │   ├── uploads/            # Archivos subidos temporalmente
 │   └── processed/          # Datasets procesados
 └── reports/                # Reportes HTML generados
+```
 
-🧰 Stack tecnológico
-LibreríaVersiónUsoPython3.10+Lenguaje baseStreamlit1.35Framework UI multipáginascikit-learn1.5ML: clustering, clasificación, preprocesadopandas / numpy—Manipulación de datosplotly—Visualizaciones interactivasscipy—Dendrogramasjoblib—Persistencia de modelosopenpyxl—Soporte Excel
+---
 
-💡 Dataset de ejemplo
-Puedes usar el dataset Mall Customers (disponible en Kaggle) para probar la aplicación. Cualquier dataset tabular con al menos una columna numérica y una columna objetivo binaria o multiclase funciona.
+## 🧰 Stack tecnológico
+
+| Librería | Versión | Uso |
+|----------|---------|-----|
+| **Python** | 3.10+ | Lenguaje base |
+| **Streamlit** | 1.35 | Framework UI multipágina |
+| **scikit-learn** | 1.5 | ML: clustering, clasificación, preprocesado |
+| **pandas / numpy** | — | Manipulación de datos |
+| **plotly** | — | Visualizaciones interactivas |
+| **scipy** | — | Dendrogramas |
+| **joblib** | — | Persistencia de modelos |
+| **openpyxl** | — | Soporte Excel |
+
+---
+
+## 💡 Dataset de ejemplo
+
+Puedes usar el dataset **Mall Customers** (disponible en Kaggle) para probar la aplicación. Cualquier dataset tabular con al menos una columna numérica y una columna objetivo binaria o multiclase funciona.
